@@ -13,7 +13,10 @@ cp -avf "/ctx/system_files"/. /
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux
+
+# Gnome stuff
+dnf5 install -y gdm gnome-session gnome-shell gnome-settings-daemon control-center nautilus gnome-disk-utility gnome-control-center gnome-user-docs gnome-shell-extensions malcontent malcontent-control gnome-initial-setup pipewire pipewire-alsa pipewire-pulse wireplumber mutter NetworkManager gvfs gvfs-fuse gnome-backgrounds gnome-backgrounds-extras gnome-console flatpak
+flatpak install -y flathub org.gnome.Decibels org.gnome.Calculator org.gnome.Calendar org.gnome.Snapshot org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Papers org.gnome.Loupe org.gnome.Logs org.gnome.Maps org.gnome.TextEditor org.gnome.Showtime org.gnome.Weather org.gnome.Epiphany io.bassi.Amberol io.github.kolunmi.Bazaar net.nokyan.Resources
 
 # Use a COPR Example:
 #
@@ -25,3 +28,4 @@ dnf5 install -y tmux
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl enable gdm
